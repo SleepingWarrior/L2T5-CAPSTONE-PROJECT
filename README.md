@@ -17,7 +17,18 @@ Finally, the user will receive an alert message with their purchase details and 
 
 [2] https://github.com/SleepingWarrior/L2T5-CAPSTONE-PROJECT.git
 
-[3] Run the folder in Visual Studio Code to view the code if required.
+[3] Run the folder in Visual Studio Code or similar IDE to view the code if required. The project can also open in the browser with /index.html. 
+
+[3.1] Add Jquery and the JS links just before the closing body tag in the index.html file to run the project from the VSC editor 
+
+``    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.js"
+        integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous" defer></script>
+
+    <!-- Javascript -->
+    <script src="./JS/objects.js" defer="defer"></script>
+    <script src="./JS/app.js" defer="'defer"></script>
+``
 
 [4] Install Extension Live Server "ritwickdey.LiveServer" and run Live Server to view the website on your default browser.
 
