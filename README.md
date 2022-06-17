@@ -1,4 +1,4 @@
-# PROJECT NAME: e-Commerce Store Project
+# PROJECT NAME: e-Commerce Store
 
 L2T5 Add Capstone Project L1T15 to Github
 
