@@ -1,7 +1,6 @@
-# L2T5-CAPSTONE-PROJECT
-L2T5 Add Capstone Project L1T15 to Github
+# PROJECT NAME: e-Commerce Store Project
 
-# Capstone Project
+L2T5 Add Capstone Project L1T15 to Github
 
 ## Description
 
