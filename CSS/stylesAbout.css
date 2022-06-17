@@ -1,0 +1,268 @@
+/* Styling the About Page */
+
+/* 10px is used instead of the 16px HTML default and scaled accordingly */
+html {
+    font-size: 62.5%;
+}
+
+/* Navbar styling the same as main page */
+.navbar {
+    width: 100%;
+    height: 5rem;
+}
+
+/* Search Input Styling */
+.search-input {
+    font-size: 1.5rem;
+    width: 30rem;
+    height: 3.5rem;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+/* Navigation Links  */
+a {
+    font-size: 2rem;
+    margin: .5rem;
+    box-sizing: border-box;
+    margin-left: 3rem;
+}
+
+/* login Button Styling */
+.btn-nav {
+    margin: 1rem;
+    width: 10rem;
+    font-size: 1.8rem;
+    margin-right: 2rem;
+}
+
+/* Search icon Styling */
+.bi-search {
+    font-size: 2.8rem;
+    margin-top: auto;
+    margin-bottom: auto;
+    width: 8rem;
+}
+
+.bi-search:hover {
+    transform: scale(120%);
+}
+
+/* ------------------------------------------------ Our Products Section ------------------------------------------ */
+
+.container-fluid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    width: 100%;
+    font-family: 'Fredoka', sans-serif;
+    font-size: 0.6rem;
+    color: #548CFF;
+    text-align: center;
+    padding: 0;
+}
+
+#ourServices {
+    grid-column: 1/4;
+    width: 100%;
+    color: #D82148;
+    margin-top: 1rem;
+    margin-bottom: 0rem;
+    font-size: 4rem;
+    z-index: 1;
+}
+
+.ourServicesBackground1 {
+    height: 35rem;
+    position: absolute;
+    width: 100%
+}
+
+.productsOurServices,
+.deliveriesServices,
+.customerServices {
+    height: 28rem;
+    z-index: 1;
+}
+
+.h2-ourServices {
+    width: 80%;
+    text-align: center;
+    margin-top: 2rem;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Change the text when hover over for the our services section */
+.h2-ourServices:hover {
+    color: #D82148;
+}
+
+/* Change Image Size when hovered over */
+.imagesOurServices:hover {
+    transform: scale(110%, 110%);
+}
+
+#TestimonialHeading,
+#writeTestimonialHeading {
+    grid-column: 1/4;
+    width: 100%;
+    color: #D82148;
+    margin-top: 1rem;
+    margin-bottom: 0rem;
+    font-size: 4rem;
+}
+
+#shoppingCart,
+#worldPlane,
+#happyCustomer {
+    width: 20rem;
+    z-index: 1;
+    shape-outside: circle();
+    border: solid 1px white;
+    vertical-align: middle;
+    border-radius: 100%;
+    margin-top: 2rem;
+}
+
+/* ------------------------------------------------------------- Testimonial Section ------------------------------------------- */
+/* Create container for the layout */
+.testimonialContainer {
+    grid-column: 1/4;
+    background-color: #548CFF;
+    height: 35rem;
+    animation: testBackgroundAnimation;
+    animation-iteration-count: infinite;
+    animation-duration: 2s;
+    animation-direction: alternate-reverse;
+}
+
+/* Styling the 3 x testimonials */
+.test1,
+.test2,
+.test3 {
+    width: 100%;
+    font-size: 1.4rem;
+    color: white;
+    margin-left: 1rem;
+}
+
+/* Styling the 3 x animation images */
+.testImg1,
+.testImg2,
+.testImg3 {
+    border-radius: 50%;
+    width: 20rem;
+    background-color: #548CFF;
+    margin: 42px 0px;
+    margin-right: 3rem;
+    margin-top: 3rem;
+    float: left;
+    shape-outside: circle();
+}
+
+/* Animations for the background */
+@keyframes testBackgroundAnimation {
+    from {
+        background-color: #548CFF;
+    }
+
+    to {
+        background-color: #86C6F4;
+    }
+}
+
+/* ------------------------------------------------------------- Write Testimonial ------------------------------------------- */
+/* Create container for the layout */
+.container-writeTest {
+    background-image: linear-gradient(to right, #4FD3C4, #8591ff);
+    grid-column: 1/4;
+    height: 40rem;
+    animation-name: testimonialAnimate;
+    animation-duration: 2s;
+    animation-timing-function: ease-in-out;
+    animation-direction: alternate-reverse;
+    animation-iteration-count: infinite;
+    position: relative
+}
+
+/* Animation for the background effect */
+@keyframes testimonialAnimate {
+    0% {
+        background-image: linear-gradient(to right, #4FD3C4, #8591ff);
+    }
+
+    50% {
+        background-image: linear-gradient(to right, #8591ff, #4FD3C4);
+    }
+
+    100% {
+        background-image: linear-gradient(to left, #8591ff, #4FD3C4);
+    }
+}
+
+.writeTestimonial {
+    width: 50%;
+    font-size: 1.5rem;
+    margin-left: 1rem;
+    position: absolute;
+    margin-top: 0;
+    top: 20%;
+    left: 50%;
+    transform: translateX(-35%);
+
+}
+
+/* Styling for the Write Testimonial Heading */
+#writeTestimonialHeading {
+    color: #D82148;
+    height: 5rem;
+}
+
+/* Style the form  for the testimonial section */
+.form {
+    border-radius: 0.5rem;
+    background-image: linear-gradient(to right, #4FD3C4, #85F4FF);
+    border: 0.2px solid white;
+    height: 27rem;
+    margin-top: 0.5rem;
+    position: relative;
+    width: 70%;
+}
+
+.formInputDetails {
+    font-size: 1.4rem;
+    width: 30rem;
+    height: 4rem;
+    padding: 10px;
+    margin: 1.5rem;
+    display: inline;
+}
+
+#floatingTextarea2 {
+    font-size: 1.4rem;
+    width: 63rem;
+    margin-left: 1.5rem;
+    position: absolute;
+
+}
+
+/* div containing button */
+#btn-testimonialBox {
+    height: 3.5rem;
+    width: 40%;
+    margin-left: 1.5rem;
+    margin-top: 2rem;
+    position: absolute;
+    left: 50%;
+    top: 75%;
+    transform: translateX(-50%);
+}
+
+/* button styling */
+.btn-testimonial {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    font-size: 1.4rem;
+}

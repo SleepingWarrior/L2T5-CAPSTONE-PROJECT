@@ -1,0 +1,243 @@
+/* Styling the Contact Page */
+
+/* 10px is used instead of the 16px HTML default and scaled accordingly */
+html {
+    font-size: 62.5%;
+}
+
+/* Main Body Styling with background animation */
+body {
+    background-color: #D18CE0;
+    animation-name: animate;
+    animation-duration: 4s;
+    animation-direction: reverse;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease;
+
+}
+
+.navbar {
+    width: 100%;
+    height: 5rem;
+
+}
+
+/* Search Input Styling */
+.search-input {
+    font-size: 1.5rem;
+    width: 30rem;
+    height: 3.5rem;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+/* Navigation Links  */
+a {
+    font-size: 2rem;
+    margin: .5rem;
+    box-sizing: border-box;
+    margin-left: 3rem;
+}
+
+/* login Button Styling */
+.btn-nav {
+    margin: 1rem;
+    width: 10rem;
+    font-size: 1.8rem;
+    margin-right: 2rem;
+}
+
+/* Search icon Styling */
+.bi-search {
+    font-size: 2.8rem;
+    font-weight: 300;
+    text-align: center;
+    margin-top: auto;
+    margin-bottom: auto;
+    width: 8rem;
+    color: #5463FF;
+}
+
+/* magnifying Glass Hover effect */
+.bi-search:hover {
+    transform: scale(120%);
+}
+
+.container-fluid {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 1rem;
+    position: relative;
+}
+
+.formHeading {
+    font-family: 'Fredoka', sans-serif;
+    font-size: 4rem;
+    grid-column: 1/-1;
+    color: #495371;
+}
+
+
+/*---------------------------------------------- Styling of the form ----------------------------------------*/
+/* Styling the form input section */
+.formInputDetails {
+    display: inline-block;
+    margin: 2rem auto;
+    height: 3.5rem;
+    font-size: 1.5rem;
+    grid-column: 1/-1;
+    width: 20%;
+}
+
+/* Styling the form comment box */
+.formInputComment {
+    width: 20%;
+    margin-top: 2rem auto;
+    border-radius: 1rem;
+    font-size: 1.5rem;
+    font-style: italic;
+}
+
+.input-group {
+    width: 20%;
+}
+
+.form-check {
+    font-size: 1.4rem;
+    margin-top: 2rem;
+}
+
+.formFileAttach {
+    width: 20%;
+    margin: 2rem 0;
+    font-size: 1.5rem;
+}
+
+.form-check-label {
+    font-style: italic;
+}
+
+/* The submit button styling with the color animation */
+.btn-primary {
+    width: 15rem;
+    height: 3.5rem;
+    font-size: 1.5rem;
+    animation-name: btnAnimate;
+    animation-duration: 1.5s;
+    animation-direction: alternate-reverse;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease;
+
+}
+
+/* Animation of the background to change colors*/
+@keyframes animate {
+    0% {
+        background-color: #D18CE0
+    }
+
+    50% {
+        background-color: #86C6F4;
+
+    }
+
+    100% {
+        background-color: #D18CE0;
+    }
+
+}
+
+/* animation of the button to give it the glow effect */
+@keyframes btnAnimate {
+    0% {
+        background-color: rgb(13, 110, 253);
+
+    }
+
+    25% {
+        background-color: #FF6464;
+        border: #FF6464;
+    }
+
+    50% {
+
+        background-color: rgb(13, 110, 253);
+        border: rgb(13, 110, 253);
+    }
+
+    75% {
+        background-color: #FF6464;
+        border: #FF6464;
+    }
+
+
+    100% {
+        background-color: rgb(13, 110, 253);
+        border: rgb(13, 110, 253)
+    }
+
+}
+
+/* Table Styling for the social media text*/
+.container-Table {
+    display: grid;
+    grid-column: 1/-1;
+    grid-template-rows: 5rem 10rem;
+    width: 100%;
+}
+
+/* Styling the socials heading */
+#headingSocialMedia {
+    font-size: 3rem;
+    font-family: 'Fredoka', sans-serif;
+    color: white;
+    width: 100%;
+    text-align: center;
+    margin-top: 1rem;
+
+}
+
+/* Styling the table for the socials */
+.table {
+    margin: 1.2rem auto;
+    width: 50rem;
+    height: 5rem;
+}
+
+hr {
+    color: white;
+}
+
+td {
+    box-sizing: border-box;
+    margin-left: 10px;
+    font-size: 2rem;
+    padding: 0 4rem;
+}
+
+/* Style the social links to give it a link appearance, no links were created */
+td:hover {
+    transform: scale(110%);
+    cursor: pointer;
+    color: blue;
+}
+
+.bi {
+    margin-left: 1rem;
+}
+
+/* Styling the social links */
+.bi-facebook {
+    border-radius: 10%;
+    font-size: 2rem;
+    background-color: white;
+    color: blue;
+}
+
+.bi-google {
+    color: red;
+}
+
+.bi-twitter {
+    color: blue;
+}

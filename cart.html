@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delivery</title>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.js"
+        integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous" defer="defer"></script>
+
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/3e645cc519.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@600&family=Hubballi&display=swap"
+        rel="stylesheet">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Hubballi&display=swap" rel="stylesheet">
+
+
+    <!--Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous">
+    </script>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
+
+    <link rel="stylesheet" href="./CSS/cart.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Shop by Department
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="./index.html#dailydeals">Daily Deals</a></li>
+                            <li><a class="dropdown-item" href="./index.html#electronics/">Computers and Components</a>
+                            </li>
+                            <li><a class="dropdown-item" href="./index.html#tools">Tools and DIY</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="./index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./about.html">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./contacts.html" tabindex="-1" aria-disabled="true">Contact Us</a>
+                    </li>
+                </ul>
+                <form class="search-bar d-flex">
+                    <h1 class="cart-checkout-display"></h1>
+                    <input class="search-input rm-control me-3" type="search" placeholder=" Search"
+                        aria-label=" Search">
+                    <i class="bi bi-search"></i>
+                    <a class="nav-link" href="./cart.html" onclick="addItemstoCheckOut()" tabindex="-1"
+                        aria-disabled="true"><i class="cart-checkout bi bi-cart2"><span
+                                id="checkoutQty">0</span></i></a>
+                    <button type="button" class="btn-login btn btn-outline-info">Login</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+    <!-- --------------------------------------------------------- End Navbar ------------------------------------------------------------ -->
+    <div id='checkout-form' class="row">
+        <div id='deliveryCheckout' class="delivery_checkout col-75">
+            <div id="paymentDetails" class="container">
+                <form action="#orderDetails">
+                    <!-- <div class="row"> -->
+                    <div class="col-50">
+                        <h2>Complete the Delivery Details</h2>
+                        <div class="deliveryForm">
+                            <label for="fname"><i class="fa fa-user"></i>Full Name</label>
+                            <input type="text" id="fname" name="firstname" placeholder="John M. Doe">
+                            <label for="email"><i class="fa fa-envelope"></i> Email</label>
+                            <input type="text" id="email" name="email" placeholder="john@example.com">
+                            <label for="adr"><i class="fa fa-address-card-o"></i> Address</label>
+                            <input type="text" id="adr" name="address" placeholder="542 W. 15th Street">
+                            <label for="city"><i class="fa fa-institution"></i> City</label>
+                            <input type="text" id="city" name="city" placeholder="Cape Town">
+                        </div>
+                        <div class="row">
+                        </div>
+                    </div>
+                    <!-- </div> -->
+                    <input type="submit" value="Next" id='btn-confirm-order' class="btn-confirm-order btn-submit">
+                </form>
+            </div>
+        </div>
+
+        <div class="payment container">
+            <h2>Credit Card Payment</h2>
+            <div class="icon-container">
+                <i class="fa fa-cc-visa" style="color:navy;"></i>
+                <i class="fa fa-cc-amex" style="color:blue;"></i>
+                <i class="fa fa-cc-mastercard" style="color:red;"></i>
+                <i class="fa fa-cc-discover" style="color:orange;"></i>
+            </div>
+            <label for="cname">Name on Card</label>
+            <input type="text" id="cname" name="cardname" placeholder="John More Doe">
+            <label for="ccnum">Credit card number</label>
+            <input type="text" id="ccnum" name="cardnumber" placeholder="xxxxx-xxxx-xxxx-xxxx">
+            <label for="expmonth">Exp Month</label>
+            <input type="text" id="expmonth" name="expmonth" placeholder="September">
+
+            <div class="card-expiry-details">
+                <div class="col-50">
+                    <label for="expyear">Exp Year</label>
+                    <input type="text" id="expyear" name="expyear" placeholder="2018">
+                </div>
+                <div class="col-50">
+                    <label for="cvv">CVV</label>
+                    <input type="text" id="cvv" name="cvv" placeholder="352">
+                </div>
+            </div>
+            <input type="button" value="Confirm Checkout" id='btn-confirm-checkout'
+                class="btn-confirm-order btn-submit">
+        </div>
+        <div class="col-25">
+            <div id="checkout" class="container">
+                <h2>Shopping Cart
+                    <span class="price" style="color:black">
+                        <i class="fa fa-shopping-cart"></i>
+                        <b id='qty'>0</b>
+                    </span>
+                </h2>
+                <div id='cartItems'>
+
+                </div>
+                <hr>
+                <!-------------------------------------------------------- Checkout ---------------------------------------------------->
+                <div class='cartCost'>
+                    <p>Sub Total<span class="currency">R</span><span class="price " id='subtotal'>0</span></p>
+                    <p>Vat (15%)<span class="currency">R</span><span id='vat' class="price">0</span></p>
+                    <p>Delivery<span class="currency">R</span><span id='delivery-checkout-price' class="price"
+                            id='delivery-cost'>0</span></p>
+                    <p>Coupon Number<span id='coupon-checkout-number' class="price" id='coupon-checkout-number'>0</span>
+                    </p>
+                    <p>Coupon Amount<span class="currency">R</span><span id='coupon-checkout-discount'
+                            class="price">0</span></p>
+                    <p>Total<span class="currency">R</span><span id='totalSum' class="totalSum price">0</span></p>
+                    <p>Select your delivery Method</p>
+                    <div class="deliveryOptions">
+                        <form>
+                            <label class="deliveryLabel container">Collection<input type="checkbox" id="collect"
+                                    class='checkbox' onchange="showBtn(this.checked)"></label>
+                            <label class="deliveryLabel container">Delivery<input type="checkbox"
+                                    onchange='showHideDelivery(this.checked)' id="delivery" class='checkbox'></label>
+                        </form>
+                    </div>
+                </div>
+                <!-------------------------------------------------------- Discont Coupons ------------------------------------------------------>
+                <form id='orderCoupons' action="">
+                    <div id='coupon-container' class='container'>
+                        <h2>Add a Discount Coupon</h2>
+                        <label class="coupon-label">Do you have Discount Coupon?<input type="checkbox" id="coupon-label"
+                                class='checkbox' onchange="showHideCoupon(this.checked)"></label>
+                        <div id="couponInput">
+                            <input type="text" class="coupon-number-input" name="coupon"
+                                placeholder="Add Coupon Number">
+                            <input type="button" value="Add Coupon" id='btn-confirm-coupon'
+                                class="btn-confirm-order btn-submit">
+                        </div>
+                    </div>
+                </form>
+                <input id='btn-collect-continue' type="button" value="Next" class="btn-collect-continue btn-submit">
+                <!-- <input id='btn-delivery-continue' type="submit" value="Next" class="btn-delivery-continue btn-submit"> -->
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-------------------------------------------------------- Order Comfirmation ----------------------------------------------------->
+    <form id='orderDetails' action="./index.html">
+        <div id='orderConfirmed' class='container'>
+            <h2>Payment Successfull, Thank you for your order</h2>
+            <!-- <p>Sub Total <span id='checkout-subtotal' class="price"><b id='subtotal'>R0</b></span>
+            </p>
+            <p>Vat (15%) <span id='checkout-vat' class="price"><b id='vat'>R0</b></span>
+            </p> -->
+            <p>Total<span id='confirm-order-currency'>R</span><span id='checkout-total' class="totalSum price"><b
+                        id='totalSum'>0</b></span></p>
+            <p>Order Number<span id='orderNumber' class="price"><b id='order#'>0</b></span></p>
+            <input id='btn-close' type="submit" value="Close" class="btn-close-order btn-submit">
+        </div>
+    </form>
+    <!-- jQuery -->
+
+
+    <script src="./JS/objects.js" defer="defer"></script>
+    <script src="./JS/app.js" defer="defer"></script>
+</body>
+
+</html>

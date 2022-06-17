@@ -1,0 +1,400 @@
+/* Body Styling with background animation */
+body {
+    margin: 0;
+    margin-bottom: 6rem;
+    background-color: #4D77FF;
+    color: white;
+    animation-name: backgroundAnimate;
+    animation-duration: 3s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-fill-mode: both;
+}
+
+/* 10px is used instead of the 16px HTML default and scaled accordingly */
+html {
+    font-size: 62.5%;
+}
+
+/* ---------------------------------------------------------- Navbar --------------------------------------------------------*/
+.navbar {
+    width: 100vw;
+    max-height: 7rem;
+}
+
+.navbar-nav {
+    display: flex;
+    justify-content: space-evenly;
+    width: 30%;
+    font-size: 2rem;
+}
+
+.search-bar {
+    display: flex;
+    justify-content: space-evenly;
+    width: 30%;
+    align-items: center;
+    margin-right: 3rem;
+}
+
+/* Search Input Styling */
+.search-input {
+    font-size: 1.5rem;
+    width: 30rem;
+    height: 3.5rem;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+/* login Button Styling */
+.btn-nav-login {
+    width: 10rem;
+    font-size: 1.8rem;
+}
+
+/* Cart Checkout Styling */
+.cart-checkout {
+    font-size: 4rem;
+    width: 7rem;
+    font-weight: 300;
+    padding: 0.4rem 0;
+    color: #5463FF;
+    z-index: 1;
+}
+
+.nav-link {
+    margin-right: 1.5rem;
+}
+
+/* Search icon "magnifying glass "Styling */
+.bi-search {
+    font-size: 2.8rem;
+    font-weight: 300;
+    text-align: center;
+    color: #5463FF;
+}
+
+#checkoutQty {
+    font-size: 2rem;
+    position: absolute;
+    color: red;
+    margin-top: 0;
+    top: 10%;
+    font-style: normal;
+}
+
+.bi-search:hover,
+.cart-checkout:hover {
+    transform: scale(130%);
+    color: white;
+}
+
+/* ---------------------------------------------------------- Shopping Items Cards --------------------------------------------------------*/
+.shoppingItemsDiv {
+    height: 70rem;
+    display: flex;
+}
+
+.shoppingItemsContainer {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: 10rem auto;
+    gap: 1.5rem;
+    margin: 0 1rem;
+    grid-column: 1/-1;
+}
+
+.sectionHeading {
+    grid-column: 1/-1;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    font-size: 3rem;
+    align-content: stretch;
+}
+
+.card:hover {
+    cursor: pointer;
+    border: solid 2px blue;
+    opacity: 80%;
+
+}
+
+.card {
+    border-radius: 1rem;
+    position: relative;
+    align-items: stretch;
+}
+
+.card img {
+    width: 100%;
+    height: 78%;
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
+}
+
+.card-title {
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 6rem;
+    font-family: 'Fredoka', sans-serif;
+    color: rgba(255, 0, 0, 0.863);
+    font-weight: 700;
+}
+
+.btn-add2Cart {
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    text-align: center;
+    transform: translate(-50%, -100%);
+    width: 100%;
+    height: 6rem;
+    font-size: 2.5rem;
+    font-family: sans-serif;
+    visibility: hidden;
+    border-radius: 0;
+}
+
+.btn-detail {
+    position: absolute;
+    top: 50%;
+    left: 52%;
+    transform: translateX(-52%);
+    width: 90%;
+    height: 4rem;
+    font-size: 1.5rem;
+    margin-top: 0.5rem;
+    padding-left: 0 auto;
+    visibility: hidden;
+}
+
+.btn-add2Cart:hover {
+    z-index: 1;
+}
+
+/* ----------------------------------------------------- Save text diagonal display ------------------------------------------------------------- */
+.card-title-save {
+    position: absolute;
+    width: 50%;
+    font-size: 3rem;
+    top: 10%;
+    text-align: center;
+    transform: translateX(-50%);
+    transform: rotate(-45deg);
+    font-family: 'Fredoka', sans-serif;
+    color: rgba(255, 0, 0, 0.863);
+    font-weight: 300;
+}
+
+/* ----------------------------------------------------- Style Go to Cart Button ------------------------------------------------------------- */
+/* Styling of the text of the hidden card */
+.card-text {
+    font-size: 1.3rem;
+    top: 80%;
+    height: 3rem;
+    margin: 0 1rem;
+    width: 90%;
+    z-index: 100;
+    color: blue
+}
+
+/* "More info" Cards number 1-5 with which are hidden  */
+#card-1,
+#card-2,
+#card-3,
+#card-4,
+#card-5 {
+    visibility: hidden;
+}
+
+/* Target the info cards with the "More info" button, visibility changed to visible and additional styling to place it in the center*/
+#card-1:target,
+#card-2:target,
+#card-3:target,
+#card-4:target,
+#card-5:target {
+    visibility: visible;
+    position: absolute;
+    top: 20%;
+    left: 30%;
+    width: 60rem;
+    height: 70rem;
+    z-index: 100;
+}
+
+/* text "close" once the hidden card is visible */
+.text-close {
+    position: absolute;
+    font-size: 1.2rem;
+    width: 4rem;
+    left: 92.6%;
+    top: 95%;
+    z-index: 99;
+    color: blue;
+}
+
+/* Close button on the "More info" card*/
+.btn-close {
+    position: absolute;
+    left: 80.9%;
+    top: 94.6%;
+    width: 6rem;
+    z-index: 100;
+    color: blue;
+}
+
+/*-------------------------------------------------------------------------- Shopping Cart Styling ------------------------------------------------ */
+.row {
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-column: 1/-1;
+}
+
+
+.cart-shopping {
+    font-size: 2.3rem;
+    text-align: center;
+    top: 50%;
+    transform: translateY(-50%);
+    position: absolute;
+    left: 1%;
+}
+
+.div-card-text {
+    grid-column: 3/5;
+
+}
+
+.div-item-price {
+    grid-column: 9/10;
+    font-size: 7rem;
+    font-family: 'Fredoka', sans-serif;
+    color: rgba(255, 0, 0, 0.863);
+}
+
+
+/* --------------------------------------------------------------------------------------- Quantity Plus and Minus Styling ----------------------------------------------------------------*/
+/* style the wishlist button on the cards */
+.bi-heart {
+    position: absolute;
+    font-size: 3rem;
+    right: 5%;
+    opacity: 75%;
+    top: 5%;
+    color: #5463FF;
+}
+
+.bi-heart:hover {
+    color: green;
+    transform: scale(120%);
+}
+
+/* Animation of the background */
+@keyframes backgroundAnimate {
+    from {
+        background-color: #4D77FF
+    }
+
+    to {
+        background-color: #a083a8
+    }
+
+}
+
+/*----------------------------------------------------------- Styling the Social Media Section -----------------------------------------------------------------------*/
+/* Place the two items into 2 rows of different height */
+.container-Table {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: 5rem 10rem;
+    width: 100%;
+    margin-bottom: 0%;
+}
+
+/* Style the social media heading */
+#headingSocialMedia {
+    font-size: 3rem;
+    font-family: 'Fredoka', sans-serif;
+    grid-row: 1/2;
+    color: white;
+    grid-column: 5/9;
+    text-align: center;
+    margin-top: 1rem;
+    width: 50rem;
+
+}
+
+/* Style the table containing the social media items */
+.table {
+    margin: 3rem auto;
+    grid-row: 2/3;
+    grid-column: 5/9;
+    width: 50rem;
+    height: 5rem;
+    color: white;
+}
+
+/* Style the table cells  */
+td {
+    box-sizing: border-box;
+    margin-left: 10px;
+    font-size: 2rem;
+    padding: 0 4rem;
+    color: white;
+}
+
+/* Space between the icon and the social media text */
+.bi {
+    margin-left: 1rem;
+}
+
+/* Style the text of the social media text */
+.bi-facebook {
+    font-size: 2rem;
+    overflow: hidden;
+    color: blue;
+}
+
+.bi-google {
+    color: red;
+}
+
+.bi-twitter {
+    color: blue;
+
+}
+
+.dropdown-menu{
+font-size: 1.5rem;
+
+}
+
+/* Scale the social media items and add pointer during hover. I did not add any links it just for the effect */
+td:hover {
+    transform: scale(105%);
+    cursor: pointer;
+    color: blue;
+}
+
+@media screen and (max-width: 1400px) {
+    body {
+        background-color: lightgreen;
+    }
+
+.navbar-nav{
+    font-size: 2rem;
+    width: 40%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.shoppingItemsDiv{
+    display: flex;
+    height: 50rem;
+}
+
+}
